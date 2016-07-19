@@ -3,209 +3,48 @@ title: Installation instructions
 type: default
 toc: true
 summary: |
-    <p>This page explains how to install Histogrammar or Histogrammar components in different ways. Use only the instructions relevant to your situation.</p>
+    <p>This page explains how to install Histogrammar in different ways. Use only the instructions relevant to your situation.</p>
 ---
 
-# Quick-install from a public repository
+# Install from a public repository
 
-## Histogrammar-Python from PyPI (pip)
+## Scala
 
-**FIXME:** when Histogrammar reaches v1.0, it will be ready to upload to PyPI.
+When available, [Maven/sbt](http://search.maven.org/) instructions will be found here.
 
-## Histogrammar-Scala from Maven Central (sbt, Maven, Spark)
+## Python
 
-**FIXME:** when Histogrammar reaches v1.0, it will be ready to upload to Maven Central.
+When available, [PyPI/pip](https://pypi.python.org/pypi) instructions will be found here.
 
-## Histogrammar-R from CRAN
+## C++
 
-**FIXME:** Histogrammar-R doesn't exist yet. Change that.
+When available, [Spack](https://github.com/LLNL/spack) instructions will be found here.
 
-## Histogrammar-Javascript from npm
+## Julia
 
-**FIXME:** Histogrammar-Javascript doesn't exist yet. Change that.
+When available, [Julia package](http://pkg.julialang.org/) instructions will be found here.
 
-## Histogrammar-C++ from Spack
+## R
 
-**FIXME:** when Histogrammar reaches v1.0, it will be ready to upload to [Spack](https://github.com/LLNL/spack) (C++ packaging system).
+When available, [CRAN](https://cran.r-project.org/) instructions will be found here.
 
-# Releases maintained on physics servers
+## Javascript
 
-## Quick start for LPC at Fermilab
+When available, [npm](https://www.npmjs.com/) instructions will be found here.
 
-If you have access to the LPC at Fermilab, you can run a preinstalled copy of [Histogrammar version 0.7](http://github.com/diana-hep/histogrammar/releases/tag/0.7).
+# Get a specific release or the latest from GitHub
 
-| LPC at Fermilab | `cmslpc-sl6.fnal.gov` |
-|:----------------|:----------------------|
-| for Scala | `/uscms/home/pivarski/public/histogrammar-0.7.jar` |
-| for SparkSQL | `/uscms/home/pivarski/public/histogrammar-sparksql-0.7.jar          ` |
-| for Python 2.6 | `/uscms/home/pivarski/public/histogrammar0.7-python2.6` |
-| for C++ | `/uscms/home/pivarski/public/include07` |
-| Scala 2.10.5 | `/uscms/home/pivarski/public/scala-2.10.5` |
-| Spark 1.6.1 | `/uscms/home/pivarski/public/spark-1.6.1-bin-hadoop1` |
+Starting in version 0.8, each language implementation of Histogrammar has a separate GitHub repository. Installation instructions (and project status) are given in each repository's README page. Reference documentation is generated from the source code for each release (and therefore isn't available for the latest).
 
-To start a Scala prompt with Histogrammar loaded, do the following:
+[Read this](../specification/#version-numbers) for an explanation of version numbers and cross-compatibility.
 
-```bash
-export PATH=/uscms/home/pivarski/public/scala-2.10.5/bin:$PATH
-scala -cp /uscms/home/pivarski/public/histogrammar-0.7.jar
-```
-```scala
-scala> import org.dianahep.histogrammar._
-```
+| Specification | Scala | Python | C++ | Julia | R | Javascript |
+|:-------------:|:-----:|:------:|:---:|:-----:|:-:|:----------:|
+| [0.9-prerelease](../specification) | [repo](https://github.com/histogrammar/histogrammar-scala), [clone](https://github.com/histogrammar/histogrammar-scala.git), [zip](https://github.com/histogrammar/histogrammar-scala/archive/master.zip) ([README](http://github.com/histogrammar/histogrammar-scala/blob/master/README.md)) | [repo](https://github.com/histogrammar/histogrammar-python), [clone](https://github.com/histogrammar/histogrammar-python.git), [zip](https://github.com/histogrammar/histogrammar-python/archive/master.zip) ([README](http://github.com/histogrammar/histogrammar-python/blob/master/README.md)) | [repo](https://github.com/histogrammar/histogrammar-cpp), [clone](https://github.com/histogrammar/histogrammar-cpp.git), [zip](https://github.com/histogrammar/histogrammar-cpp/archive/master.zip) ([README](http://github.com/histogrammar/histogrammar-cpp/blob/master/README.md)) | [repo](https://github.com/histogrammar/Histogrammar.jl), [clone](https://github.com/histogrammar/Histogrammar.jl.git), [zip](https://github.com/histogrammar/Histogrammar.jl/archive/master.zip) ([README](http://github.com/histogrammar/Histogrammar.jl/blob/master/README.md)) | | |
+| [0.8](../specification/0.8) | [0.8.0](https://github.com/histogrammar/histogrammar-scala/releases/tag/0.8.0) ([README](http://github.com/histogrammar/histogrammar-scala/blob/0.8.x/README.md), [reference](http://histogrammar.org/scala/0.8.0/#org.dianahep.histogrammar.package)) | [0.8.0](https://github.com/histogrammar/histogrammar-python/releases/tag/0.8.0) ([README](http://github.com/histogrammar/histogrammar-python/blob/0.8.x/README.md), [reference](http://histogrammar.org/python/0.8.0/)) | [0.8.0](https://github.com/histogrammar/histogrammar-cpp/releases/tag/0.8.0) ([README](http://github.com/histogrammar/histogrammar-cpp/blob/0.8.x/README.md)) | [0.8.0](https://github.com/histogrammar/Histogrammar.jl/releases/tag/0.8.0) ([README](http://github.com/histogrammar/Histogrammar.jl/blob/0.8.x/README.md)) | | |
+| [0.7](../specification/0.7) | [0.7.1](https://github.com/histogrammar/histogrammar-multilang/releases/tag/0.7.1) ([reference](http://histogrammar.org/scala/0.7.1/#org.dianahep.histogrammar.package)) | [0.7.1](https://github.com/histogrammar/histogrammar-multilang/releases/tag/0.7.1) ([reference](http://histogrammar.org/python/0.7.1/)) | [0.7.1](https://github.com/histogrammar/histogrammar-multilang/releases/tag/0.7.1) | | | |
+| 0.6 | [0.6](https://github.com/histogrammar/histogrammar-multilang/releases/tag/0.6) ([reference](http://histogrammar.org/scala/0.6/#org.dianahep.histogrammar.package)) | [0.6](https://github.com/histogrammar/histogrammar-multilang/releases/tag/0.6) | [0.6](https://github.com/histogrammar/histogrammar-multilang/releases/tag/0.6) | | | |
 
-To start a local (non-distributed, testing) Spark session with Histogrammar loaded, do the following:
+# Use a version pre-installed on a physics server
 
-```bash
-export PATH=/uscms/home/pivarski/public/spark-1.6.1-bin-hadoop1/bin:$PATH
-spark-shell --jars=/uscms/home/pivarski/public/histogrammar-0.7.jar,/uscms/home/pivarski/public/histogrammar-sparksql-0.7.jar
-```
-```scala
-scala> import org.dianahep.histogrammar._
-scala> import org.dianahep.histogrammar.sparksql._
-```
-
-To use Histogrammar in Python, do:
-
-```bash
-export PYTHONPATH=/uscms/home/pivarski/public/histogrammar0.7-python2.6:$PYTHONPATH
-python
-```
-```python
->>> from histogrammar import *
-```
-
-To use Histogrammar in a C++ project, add:
-
-```
--I /uscms/home/pivarski/public/include07
-```
-
-to your compiler options and
-
-```cpp
-#include "histogrammar.hpp"
-```
-
-in your code.
-
-## Quick start for LXPLUS at CERN
-
-If you have access to LXPLUS at CERN, you can run a preinstalled copy of [Histogrammar version 0.7](http://github.com/diana-hep/histogrammar/releases/tag/0.7).
-
-| LXPLUS at CERN | `lxplus.cern.ch` |
-|:----------------|:----------------------|
-| for Scala | `/afs/cern.ch/user/p/pivarski/public/histogrammar-0.7.jar` |
-| for SparkSQL | `/afs/cern.ch/user/p/pivarski/public/histogrammar-sparksql-0.7.jar` |
-| for Python 2.6 | `/afs/cern.ch/user/p/pivarski/public/histogrammar0.7-python2.6` |
-| for C++ | `/afs/cern.ch/user/p/pivarski/public/include07` |
-| Scala 2.10.5 | `/afs/cern.ch/user/p/pivarski/public/scala-2.10.5` |
-| Spark 1.6.1 | `/afs/cern.ch/user/p/pivarski/public/spark-1.6.1-bin-hadoop1` |
-
-To start a Scala prompt with Histogrammar loaded, do the following:
-
-```bash
-export PATH=/afs/cern.ch/user/p/pivarski/public/scala-2.10.5/bin:$PATH
-scala -cp /afs/cern.ch/user/p/pivarski/public/histogrammar-0.7.jar
-```
-```scala
-scala> import org.dianahep.histogrammar._
-```
-
-To start a local (non-distributed, testing) Spark session with Histogrammar loaded, do the following:
-
-```bash
-export PATH=/afs/cern.ch/user/p/pivarski/public/spark-1.6.1-bin-hadoop1/bin:$PATH
-spark-shell --jars=/afs/cern.ch/user/p/pivarski/public/histogrammar-0.7.jar,/afs/cern.ch/user/p/pivarski/public/histogrammar-sparksql-0.7.jar
-```
-```scala
-scala> import org.dianahep.histogrammar._
-scala> import org.dianahep.histogrammar.sparksql._
-```
-
-To use Histogrammar in Python, do:
-
-```bash
-export PYTHONPATH=/afs/cern.ch/user/p/pivarski/public/histogrammar0.7-python2.6:$PYTHONPATH
-python
-```
-```python
->>> from histogrammar import *
-```
-
-To use Histogrammar in a C++ project, add:
-```
--I/afs/cern.ch/user/p/pivarski/public/include07
-```
-to your compiler options and
-
-```c
-#include "histogrammar.hpp"
-```
-in your code.
-
-# Download and compile from GitHub
-
-## Download source code from a fixed release
-
-See Histogrammar's [GitHub release page](http://github.com/diana-hep/histogrammar/releases). Below the status message for each release (which includes a table of implemented primitives) is a zip and a tar.gz.
-
-Fixed releases are stable but may not have all the features you're looking for. Each tutorial declares an earliest working version; if that version doesn't exist, it means that you need to download or clone the latest source code.
-
-## Download or clone source code from the bleeding edge
-
-Here is a [zip file for downloading](https://github.com/diana-hep/histogrammar/archive/master.zip).
-
-To clone the release, use
-
-```sh
-git clone https://github.com/diana-hep/histogrammar.git
-```
-
-If you are a GitHub user, you can also fork [the repository](http://github.com/diana-hep/histogrammar) to propose pull requests. If you're testing a new feature, you may have been directed to [a particular branch](http://github.com/diana-hep/histogrammar/branches/active).
-
-## Install Histogrammar-Python from source
-
-### System-wide
-
-Use the standard [Python](https://www.python.org/downloads/) install script:
-
-```sh
-cd histogrammar/python
-sudo python setup.py install
-```
-
-Histogrammar is compatible with both Python 2.7 and Python 3.4+. There is experimental support for Python 2.6 in the latest source.
-
-### In a user directory
-
-As usual with Python setup scripts, you can install software in your own directory without superuser access,
-
-```sh
-python setup.py install --home=~/my_installation_directory
-```
-
-but then you have to make sure that `PYTHONPATH` includes `my_installation_directory/lib`.
-
-## Compile Histogrammar-Scala and all dependent projects
-
-Run [Maven](https://maven.apache.org/download.cgi) from the base directory. The parent `pom.xml` will compile the sub-projects in the right order.
-
-```sh
-cd histogrammar
-mvn install
-```
-
-As usual with Maven, the compiled JAR files go into a `target` directory for each project (with dependencies in `target/lib`) and are cached in your `~/.m2/repository`.
-
-## Compile Histogrammar-Scala subprojects manually
-
-If you need to compile and install them separately, here is the dependency order:
-
-  * `scala` is the base package; you must `cd` to this directory and `mvn install` here first.
-    * `scala-bokeh` depends on `scala`; you can `cd` to this directory and `mvn install` here after the first installation succeeded.
-    * `scala-jit` depends on `scala`; you can `cd` to this directory and `mvn install` here after the first installation succeeded.
-    * `scala-sparksql` depends on `scala`; you can `cd` to this directory and `mvn install` here after the first installation succeeded.
-
-Thus, if one of the dependent projects doesn't compile on your system (`scala-jit` requires a C compiler and make tools) and you don't need it, you can compile the others manually.
-
-Subprojects find the base project's JAR in your `~/.m2/repository`.
+If you have access to Fermilab's LPC or CERN's LXPLUS clusters, [see these specialized instructions](physics-servers.html) for using a pre-installed version.
