@@ -12,7 +12,7 @@ toc: false
 
 ### Python
 
-  * {% include progress.html complete=0 %} [Basic use in Python](python-basic): Histogrammar with Matplotlib, the most popular Python plotting library, and no custom back-ends (for aggregation). Focuses on the basics of making aggregations, what makes Histogrammar different.
+  * {% include progress.html complete=50 %} [Basic use in Python](python-basic): Histogrammar with Matplotlib, the most popular Python plotting library, and no custom back-ends (for aggregation). Focuses on the basics of making aggregations, what makes Histogrammar different.
 
 ## Plotting front-ends
 
